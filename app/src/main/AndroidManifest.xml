@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.inge.simkopapps">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app"
+        android:label="Sim|Kop"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu_Simkop"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Jumlah_Koperasi"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Jumlah_Anggota"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Jumlah_Manager"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Jumlah_Asset"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Jumlah_Omset"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Data_Koperasi"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+    </application>
+
+</manifest>
