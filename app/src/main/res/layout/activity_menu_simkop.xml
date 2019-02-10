@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff"
+    android:background="@drawable/background"
     tools:context="com.example.inge.simkopapps.Menu_Simkop">
 
     <LinearLayout
@@ -24,9 +24,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="185dp"
-        android:background="#3aae98"
-        android:scaleType="centerCrop"
-        android:src="@drawable/koperasi" />
+        android:src="@drawable/logo"
+        android:background="@color/colorSlider"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +40,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:background="#FFFFFF"
         android:weightSum="3">
         <!--atas-->
         <LinearLayout
@@ -51,32 +49,38 @@
             android:orientation="horizontal"
             android:weightSum="2">
             <RelativeLayout
-                android:id="@+id/daftarberobat"
+                android:id="@+id/rat"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <android.support.v7.widget.CardView
-                    android:onClick="Jumlah_Koperasi"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginBottom="0dp"
-                    tools:ignore="OnClick">
-
-                    <LinearLayout
+                    <android.support.constraint.ConstraintLayout
+                        android:onClick="informasi_rat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <ImageView
+                            android:padding="20dp"
                             android:id="@+id/imageview"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/jenis_koperasi" />
+                            android:layout_height="match_parent"
+                            android:src="@drawable/rat"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="0dp"
+                            tools:ignore="MissingConstraints"/>
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="Informasi RAT"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                    </android.support.constraint.ConstraintLayout>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/besukpasien"
@@ -84,27 +88,28 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <android.support.v7.widget.CardView
-                    android:onClick="Jumlah_Anggota"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginTop="0dp">
-
-                    <LinearLayout
+                    <android.support.constraint.ConstraintLayout
+                        android:onClick="data_koperasi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/imageview1"
+                            android:padding="20dp"
+                            android:id="@+id/DataKoperasi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/jml_anggotabaru" />
+                            android:src="@drawable/data" />
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="Data Koperasi"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
 
             </RelativeLayout>
         </LinearLayout>
@@ -119,29 +124,29 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <android.support.v7.widget.CardView
-                    android:onClick="Jumlah_Manager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginTop="0dp"
-                    tools:ignore="OnClick">
-
-                    <LinearLayout
+                    <android.support.constraint.ConstraintLayout
+                        android:onClick="jenis_koperasi"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        tools:ignore="OnClick">
 
                         <ImageView
-                            android:id="@+id/imageview2"
+                            android:padding="20dp"
+                            android:id="@+id/jeniskoperasi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/jmlmanagerbaru" />
+                            android:src="@drawable/jenis" />
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="Jenis Koperasi"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent" />
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
+                    </android.support.constraint.ConstraintLayout>
 
             </RelativeLayout>
             <RelativeLayout
@@ -149,29 +154,29 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <android.support.v7.widget.CardView
-                    android:onClick="Jumlah_Asset"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginTop="0dp"
-                    tools:ignore="OnClick">
-
-                    <LinearLayout
+                    <android.support.constraint.ConstraintLayout
+                        android:onClick="status_koperasi"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        tools:ignore="OnClick">
 
                         <ImageView
                             android:id="@+id/imageview3"
+                            android:padding="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/status_kantor" />
+                            android:src="@drawable/manager" />
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="Status Koperasi"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
+                    </android.support.constraint.ConstraintLayout>
 
             </RelativeLayout>
         </LinearLayout>
@@ -185,29 +190,29 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <android.support.v7.widget.CardView
-                    android:onClick="Jumlah_Omset"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginTop="0dp"
-                    tools:ignore="OnClick">
-
-                    <LinearLayout
+                    <android.support.constraint.ConstraintLayout
+                        android:onClick="Jumlah_Omset"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        tools:ignore="OnClick">
 
                         <ImageView
+                            android:padding="20dp"
                             android:id="@+id/imageview4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/shu" />
+                            android:src="@drawable/omset" />
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="Jumlah Omset"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent" />
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
+                    </android.support.constraint.ConstraintLayout>
 
             </RelativeLayout>
 
@@ -218,28 +223,29 @@
                 android:layout_alignParentTop="true"
                 android:layout_weight="1">
 
-                <android.support.v7.widget.CardView
-                    android:onClick="Data_Koperasi"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginTop="0dp"
-                    tools:ignore="OnClick">
-
-                    <LinearLayout
+                    <android.support.constraint.ConstraintLayout
+                        android:onClick="jumlah_koperasi"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        tools:ignore="OnClick">
 
                         <ImageView
+                            android:padding="20dp"
                             android:id="@+id/imageview5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/dtkoperasibaru" />
+                            android:src="@drawable/anggota" />
 
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="Jumlah Anggota"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
 
             </RelativeLayout>
         </LinearLayout>

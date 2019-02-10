@@ -13,22 +13,22 @@ public class Menu_Simkop extends AppCompatActivity {
         setContentView(R.layout.activity_menu_simkop);
     }
 
-    public void Jumlah_Koperasi(View view) {
+    public void informasi_rat(View view) {
         Intent intent = new Intent(Menu_Simkop.this, Jumlah_Koperasi.class);
         startActivity(intent);
     }
 
-    public void Jumlah_Anggota(View view) {
+    public void data_koperasi(View view) {
         Intent intent = new Intent(Menu_Simkop.this, Jumlah_Anggota.class);
         startActivity(intent);
     }
 
-    public void Jumlah_Manager(View view) {
+    public void jenis_koperasi(View view) {
         Intent intent = new Intent(Menu_Simkop.this, Jumlah_Manager.class);
         startActivity(intent);
     }
 
-    public void Jumlah_Asset(View view) {
+    public void status_koperasi(View view) {
         Intent intent = new Intent(Menu_Simkop.this, Jumlah_Asset.class);
         startActivity(intent);
     }
@@ -38,7 +38,7 @@ public class Menu_Simkop extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void Data_Koperasi(View view) {
+    public void jumlah_koperasi(View view) {
         Intent intent = new Intent(Menu_Simkop.this, Data_Koperasi.class);
         startActivity(intent);
     }

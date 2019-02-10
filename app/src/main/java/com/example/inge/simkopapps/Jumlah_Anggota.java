@@ -20,7 +20,7 @@ public class Jumlah_Anggota extends AppCompatActivity {
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new MyBrowser());
         //ini manggil url web dari webview-nya
-        view.loadUrl("http://simpokdev.gobisnis.online/mdashboard/chart_jumlah_anggota");
+        view.loadUrl("http://simpokdev.lavenderprograms.com/mdashboard/koperasi");
     }
 
     //ini supaya gak nge-redirect ke browser

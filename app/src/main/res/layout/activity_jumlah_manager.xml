@@ -19,7 +19,7 @@
         android:gravity="center">
         <TextView
             android:textColor="#fff"
-            android:text="Jumlah Manager"
+            android:text="Jenis Koperasi"
             android:textStyle="bold"
             android:textSize="20dp"
             android:layout_width="wrap_content"
