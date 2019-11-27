@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends AppCompatActivity {
+public class    MainActivity extends AppCompatActivity {
 
     private static int splashInterval = 2000;
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
             private void finish() {
                 // TODO Auto-generated method stub
-
+                MainActivity.this.finish();
             }
         }, splashInterval);
 

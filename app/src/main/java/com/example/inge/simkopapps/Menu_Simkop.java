@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class Menu_Simkop extends AppCompatActivity {
+    private long backPressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +44,18 @@ public class Menu_Simkop extends AppCompatActivity {
         Intent intent = new Intent(Menu_Simkop.this, Data_Koperasi.class);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        if(backPressedTime + 2000 > System.currentTimeMillis()){
+            super.onBackPressed();
+            return;
+        }else{
+            Toast.makeText(getBaseContext(),"Klik tombol kembali lagi untuk keluar",Toast.LENGTH_SHORT).show();
+        }
+        backPressedTime = System.currentTimeMillis();
+    }
 }
+
+
 

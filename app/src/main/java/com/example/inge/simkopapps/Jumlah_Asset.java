@@ -21,7 +21,7 @@ public class Jumlah_Asset extends AppCompatActivity {
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new MyBrowser());
         //ini manggil url web dari webview-nya
-        view.loadUrl("http://simpokdev.lavenderprograms.com/mdashboard/status_kantor");
+        view.loadUrl("http://simkop.dfiserver.com/mdashboard/status_kantor");
     }
 
     //ini supaya gak nge-redirect ke browser

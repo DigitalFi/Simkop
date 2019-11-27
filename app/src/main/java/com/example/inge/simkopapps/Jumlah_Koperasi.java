@@ -18,8 +18,9 @@ public class Jumlah_Koperasi extends AppCompatActivity {
         view = (WebView) this.findViewById(R.id.webView);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new MyBrowser());
+        view.computeScroll();
         //ini manggil url web dari webview-nya
-        view.loadUrl("http://simpokdev.lavenderprograms.com/mdashboard/rat");
+        view.loadUrl("http://simkop.dfiserver.com/mdashboard/rat");
     }
 
     //ini supaya gak nge-redirect ke browser
